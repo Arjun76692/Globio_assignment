@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Am I Exam-Ready? — German A1 Readiness Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== LANDING SCREEN ===== -->
+    <div id="landing" class="screen active">
+        <div class="container">
+            <p class="label">German A1</p>
+            <h1>Am I Exam-Ready?</h1>
+            <p class="subtitle">
+                Find out if you're prepared for your Goethe or ÖSD A1 exam.<br>
+                15 questions across vocabulary, grammar, and reading.
+            </p>
+            <div class="meta">
+                <span>📝 15 Questions</span>
+                <span>⏱️ ~5 Minutes</span>
+                <span>📊 Instant Results</span>
+            </div>
+            <button id="start-btn" class="btn-primary" onclick="startQuiz()">Start Readiness Check</button>
+            <p class="fine-print">No sign-up needed. Completely free.</p>
+        </div>
+    </div>
+
+    <!-- ===== QUIZ SCREEN ===== -->
+    <div id="quiz" class="screen">
+        <div class="progress-bar-track">
+            <div id="progress-bar" class="progress-bar-fill"></div>
+        </div>
+        <div class="container quiz-container">
+            <p id="question-counter" class="question-counter"></p>
+            <p id="question-skill" class="question-skill"></p>
+
+            <!-- Reading passage (shown only for reading questions) -->
+            <div id="passage-box" class="passage-box" style="display:none;"></div>
+
+            <h2 id="question-text" class="question-text"></h2>
+
+            <div id="options-container" class="options-container"></div>
+        </div>
+    </div>
+
+    <!-- ===== RESULTS SCREEN ===== -->
+    <div id="results" class="screen">
+        <div class="container results-container">
+            <div id="results-header" class="results-header"></div>
+
+            <div class="section">
+                <h3>Score by Skill</h3>
+                <div id="skill-bars" class="skill-bars"></div>
+            </div>
+
+            <div class="section">
+                <h3>What to Focus On</h3>
+                <div id="recommendations" class="recommendations"></div>
+            </div>
+
+            <div class="results-actions">
+                <button class="btn-primary" onclick="retryQuiz()">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
